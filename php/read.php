@@ -1,7 +1,7 @@
 <?php
 include '../php/db.php';
 
-$sql = "SELECT * FROM cardConductores";
+$sql = "SELECT * FROM cardConductores order by id desc";
 $result = $conn->query($sql);
 
 $conductores = [];
