@@ -4,6 +4,7 @@
     let editId = null;
     url='https://interurbano.wit.la/card-rfid/php/';
     leerConductores();
+    cargarNombres();
   
     $('#saveButton').on('click', function() {
       const rut = $('#rut').val().trim();
@@ -102,9 +103,9 @@
       editId = null;
     });
   
-    $('#conductorModal').on('show.bs.modal', function () {
-      cargarNombres();
-    });
+   // $('#conductorModal').on('show.bs.modal', function () {
+   //   cargarNombres();
+   // });
   
     function cargarNombres() {
       $.get('https://dev.wit.la/api/gpsemploy', function(response) {
